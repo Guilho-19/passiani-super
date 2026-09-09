@@ -88,6 +88,47 @@
             transform: scale(1.02);
         }
 
+        /* Estilos da Tabela de Tipologias (Grade) */
+        .typology-section {
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        .typology-table {
+            display: flex;
+            flex-direction: column;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+        .t-header, .t-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 15px 20px;
+            align-items: center;
+        }
+        .t-header {
+            background-color: #14213d;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .t-row {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            color: #555;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        .t-row:last-child {
+            border-bottom: none;
+        }
+        .t-row:hover {
+            background-color: #f8f9fa;
+        }
+
         /* Responsividade Específica */
         @media (max-width: 768px) {
             .details-grid {
@@ -96,6 +137,21 @@
             }
             .project-hero h1 {
                 font-size: 2.5rem;
+            }
+            .t-header {
+                display: none; /* Esconde cabeçalho no celular para formato de lista */
+            }
+            .t-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 20px;
+            }
+            .t-row div::before {
+                content: attr(data-label) ": ";
+                font-weight: 600;
+                color: #14213d;
+                display: inline-block;
+                width: 140px;
             }
         }
     </style>
@@ -136,11 +192,11 @@
                         <ul class="project-features">
                             <li>
                                 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                <strong>Localização:</strong> Centro - Liberdade
+                                <strong>Localização:</strong> Rua Teixeira Leite, 170 - Liberdade
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h2v4h2V8h2v4h2V8h2v4h2V8h2v4h2V8h2v10z"/></svg>
-                                <strong>Área Privativa:</strong> 41m²
+                                <strong>Área Privativa:</strong> 37m² e 41m²
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
@@ -155,6 +211,36 @@
                     </div>
                     <div class="details-image">
                         <img src="../assets/img/freeLiberdade/04.webp" alt="Free Liberdade Fachada" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+                <div class="typology-section">
+                    <h2 style="color: #14213d; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 30px; border-bottom: 2px solid #C9A26B; display: inline-block; padding-bottom: 10px;">Tipologias Disponíveis</h2>
+                    <div class="typology-table">
+                        <div class="t-header">
+                            <div>Modelo da Unidade</div>
+                            <div>Área Privativa</div>
+                            <div>Dormitórios</div>
+                            <div>Vagas</div>
+                        </div>
+                        <div class="t-row">
+                            <div data-label="Área Privativa">37m²</div>
+                            <div data-label="Modelo da Unidade">HIS2</div>
+                            <div data-label="Dormitórios">2 Dorms</div>
+                            <div data-label="Vagas">1 Vaga</div>
+                        </div>
+                        <div class="t-row">
+                            <div data-label="Modelo da Unidade">HMP</div>
+                            <div data-label="Área Privativa">37m²</div>
+                            <div data-label="Dormitórios">2 Dorms</div>
+                            <div data-label="Vagas">1 Vaga</div>
+                        </div>
+                        <div class="t-row">
+                            <div data-label="Modelo da Unidade">HMP</div>
+                            <div data-label="Área Privativa">41m²</div>
+                            <div data-label="Dormitórios">2 Dorms</div>
+                            <div data-label="Vagas">1 Vaga</div>
+                        </div>
                     </div>
                 </div>
 
