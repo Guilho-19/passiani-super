@@ -333,3 +333,84 @@ h1, h2, h3, .logo {
     font-size: 0.85rem;
     color: #666;
 }
+
+/* =========================================
+   Responsividade (Mobile & Tablets)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header e Menu de Navegação */
+    .header {
+        padding: 15px 0;
+    }
+    .header .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav a {
+        font-size: 0.85rem;
+    }
+
+    /* Seção Início (Hero) */
+    .hero {
+        padding: 100px 15px;
+    }
+    .hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Espaçamentos e Títulos Gerais */
+    .about, .services, .releases {
+        padding: 60px 15px;
+    }
+    .about h2, .services h2, .releases h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    /* Cards de Áreas de Atuação */
+    .cards {
+        gap: 20px;
+    }
+    .card {
+        min-width: 100%;
+        padding: 30px 20px;
+    }
+
+    /* Cards Imobiliários (Lançamentos) */
+    .naaby-grid {
+        grid-template-columns: 1fr; /* 1 card por linha no celular */
+        gap: 2rem;
+    }
+    .naaby-card-features {
+        flex-wrap: wrap; /* Caso a tela seja extremamente pequena, os ícones se adaptam */
+        justify-content: center;
+        gap: 15px;
+    }
+    .naaby-card-footer {
+        flex-direction: column; /* Coloca o botão embaixo do preço para facilitar o toque (touch) */
+        gap: 15px;
+        align-items: stretch;
+        text-align: center;
+    }
+    .btn-outline {
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 15px 20px 15px;
+    }
+    .footer h2 {
+        font-size: 1.6rem;
+    }
+}
