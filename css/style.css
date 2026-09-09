@@ -76,25 +76,27 @@ h1, h2, h3, .logo {
 
 /* Seção Inicial (Hero) */
 .hero {
-    /* Fundo sutilmente mesclado para dar ar de sofisticação (preparado para receber foto de fundo futuramente) */
-    background: linear-gradient(135deg, #e4e2de 0%, #f4f3ef 100%);
-    padding: 140px 0;
+    /* Imagem de fundo arquitetônica com um overlay escuro (azul marinho) para garantir a leitura do texto */
+    background: linear-gradient(rgba(20, 33, 61, 0.7), rgba(12, 21, 36, 0.85)),
+                url('../assets/img/landingPage/cabecalhoImg.webp') center center / cover no-repeat;
+    padding: 160px 0; /* Aumentei um pouco o respiro para destacar mais a imagem */
     text-align: center;
-    border-bottom: 1px solid #dcd7d0;
 }
 
 .hero h1 {
     font-size: 3.8rem;
-    color: #14213d;
+    color: #ffffff; /* Título em branco para contrastar com o fundo escuro da imagem */
     margin-bottom: 20px;
     font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra para o texto saltar da imagem */
 }
 
 .hero p {
     font-size: 1.25rem;
-    color: #555;
+    color: #eaeaea; /* Parágrafo em tom claro */
     max-width: 750px;
     margin: 0 auto 40px auto;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 
 /* Botão padrão */
@@ -181,87 +183,126 @@ h1, h2, h3, .logo {
     font-size: 1rem;
 }
 
-/* Seção de Lançamentos Imobiliários */
+/* Seção de Lançamentos Imobiliários (Estilo Naaby) */
 .releases {
-    background-color: #ffffff; /* Fundo limpo para dar destaque às fotos dos imóveis */
-}
-
-.real-estate-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.imob-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 2px; /* Bordas retas, visual mais arquitetônico e maduro */
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    flex: 1;
-    min-width: 300px;
-    max-width: 360px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    border: 1px solid #eaeaea;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 90px 0;
     text-align: left;
 }
 
-.imob-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+.releases h2 {
+    color: #f8fafc; /* Título claro para contrastar no fundo escuro */
+    text-align: center;
 }
 
-.imob-img-placeholder {
-    background-color: #e8e8e8;
-    height: 220px; /* Espaço mais alto, proporção de foto de fachada */
+.naaby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 50px;
+}
+
+/* Card Styling (Glassmorphism) */
+.naaby-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.naaby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.naaby-card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.naaby-card:hover .naaby-card-img {
+    transform: scale(1.05);
+}
+
+.naaby-card-content {
+    padding: 2rem;
+    color: #f8fafc;
+}
+
+.naaby-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #f8fafc;
+}
+
+.naaby-card-location {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #888;
-    font-size: 0.95rem;
-    font-weight: 600;
+    gap: 0.5rem;
     font-family: 'Inter', sans-serif;
-    border-bottom: 2px solid #C9A26B; /* Linha sutil dividindo a foto do texto */
 }
 
-.imob-info {
-    padding: 30px 25px;
-    background-color: #ffffff;
-    flex-grow: 1;
+.naaby-card-features {
     display: flex;
-    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 0;
 }
 
-.imob-info .status {
-    align-self: flex-start;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
+.naaby-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.naaby-feature svg {
+    width: 18px;
+    height: 18px;
+    fill: #C9A26B; /* Mantive o dourado que definimos para o Passiani */
+}
+
+.naaby-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.naaby-price {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #C9A26B;
-    background-color: transparent;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #C9A26B;
     border: 1px solid #C9A26B;
-    padding: 4px 12px;
-    border-radius: 2px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
-.imob-info h3 {
-    color: #14213d;
-    margin-bottom: 12px;
-    font-size: 1.4rem;
-}
-
-.imob-info p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0;
+.btn-outline:hover {
+    background: #C9A26B;
+    color: #000;
 }
 
 /* Footer (Contato) */
