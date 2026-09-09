@@ -254,20 +254,22 @@ h1, h2, h3, .logo {
 
 .naaby-card-features {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.8rem; /* Espaço reduzido para caber tudo com folga */
     margin-bottom: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1rem 0;
+    justify-content: space-between; /* Distribui os itens pela largura do card */
 }
 
 .naaby-feature {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     color: #94a3b8;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Ajuste suave para garantir encaixe perfeito */
     font-family: 'Inter', sans-serif;
+    white-space: nowrap; /* Impede absolutamente que o texto vá para a linha de baixo do ícone */
 }
 
 .naaby-feature svg {
