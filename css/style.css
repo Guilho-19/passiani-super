@@ -204,6 +204,7 @@ h1, h2, h3, .logo {
 
 /* Card Styling (Glassmorphism) */
 .naaby-card {
+    position: relative;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
@@ -305,6 +306,21 @@ h1, h2, h3, .logo {
 .btn-outline:hover {
     background: #C9A26B;
     color: #000;
+}
+
+/* Classe para esticar o link por todo o card */
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+.naaby-card:hover {
+    cursor: pointer;
 }
 
 /* Footer (Contato) */
