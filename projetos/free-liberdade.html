@@ -102,6 +102,25 @@
             background: #C9A26B;
         }
 
+        /* Botões de Download */
+        .download-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            flex-grow: 1; /* Faz eles dividirem o espaço no desktop */
+            text-align: center;
+        }
+
         /* Estilos da Tabela de Tipologias (Grade) */
         .typology-section {
             margin-top: 60px;
@@ -145,6 +164,13 @@
 
         /* Responsividade Específica */
         @media (max-width: 768px) {
+            .download-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .btn-download {
+                width: 100%;
+            }
             .swiper {
                 height: 300px;
             }
@@ -235,11 +261,23 @@
                     </div>
                 </div>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px;">
-                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn" style="padding: 12px 24px; font-size: 0.85rem;">Book</a>
-                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn" style="padding: 12px 24px; font-size: 0.85rem;">Tabela</a>
-                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn" style="padding: 12px 24px; font-size: 0.85rem;">Implantação</a>
-                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn" style="padding: 12px 24px; font-size: 0.85rem;">Ficha Técnica</a>
+                <div class="download-buttons">
+                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn btn-download">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Book
+                    </a>
+                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn btn-download">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Tabela
+                    </a>
+                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn btn-download">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Implantação
+                    </a>
+                    <a href="../assets/img/freeLiberdade/01.webp" download="01.webp" class="btn btn-download">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Ficha Técnica
+                    </a>
                 </div>
 
                 <div class="typology-section">
