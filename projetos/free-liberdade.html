@@ -17,6 +17,7 @@
     <script defer src="/_vercel/insights/script.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <style>
         /* Estilos específicos para a página do empreendimento */
         .project-hero {
@@ -116,7 +117,7 @@
         }
         .t-header, .t-row {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
             padding: 15px 20px;
             align-items: center;
         }
@@ -242,24 +243,28 @@
                     <div class="typology-table">
                         <div class="t-header">
                             <div>Área Privativa</div>
+                            <div>Valor Mínimo</div>
                             <div>Categoria</div>
                             <div>Dormitórios</div>
                             <div>Vagas</div>
                         </div>
                         <div class="t-row">
                             <div data-label="Área Privativa">37m²</div>
+                            <div data-label="Valor Mínimo">R$ 317,600</div>
                             <div data-label="Categoria">HIS2</div>
                             <div data-label="Dormitórios">2 Dorms</div>
                             <div data-label="Vagas">1 Vaga</div>
                         </div>
                         <div class="t-row">
                             <div data-label="Área Privativa">37m²</div>
+                            <div data-label="Valor Mínimo">R$ 444,300</div>
                             <div data-label="Categoria">HMP</div>
                             <div data-label="Dormitórios">2 Dorms</div>
                             <div data-label="Vagas">1 Vaga</div>
                         </div>
                         <div class="t-row">
                             <div data-label="Área Privativa">41m²</div>
+                            <div data-label="Valor Mínimo">R$ 392,800</div>
                             <div data-label="Categoria">HMP</div>
                             <div data-label="Dormitórios">2 Dorms</div>
                             <div data-label="Vagas">1 Vaga</div>
@@ -271,20 +276,20 @@
                     <h2>Galeria do Projeto</h2>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/01.webp" alt="Área comum"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/02.webp" alt="Decorado"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/03.webp" alt="Planta"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/04.webp" alt="Área comum"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/05.webp" alt="Decorado"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/06.webp" alt="Planta"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/07.webp" alt="Área comum"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/08.webp" alt="Decorado"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/09.webp" alt="Planta"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/10.webp" alt="Área comum"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/11.webp" alt="Decorado"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/12.webp" alt="Planta"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/13.webp" alt="Área comum"></div>
-                            <div class="swiper-slide"><img src="../assets/img/freeLiberdade/14.webp" alt="Decorado"></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/01.webp" class="glightbox"><img src="../assets/img/freeLiberdade/01.webp" alt="Área comum"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/02.webp" class="glightbox"><img src="../assets/img/freeLiberdade/02.webp" alt="Decorado"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/03.webp" class="glightbox"><img src="../assets/img/freeLiberdade/03.webp" alt="Planta"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/04.webp" class="glightbox"><img src="../assets/img/freeLiberdade/04.webp" alt="Área comum"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/05.webp" class="glightbox"><img src="../assets/img/freeLiberdade/05.webp" alt="Decorado"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/06.webp" class="glightbox"><img src="../assets/img/freeLiberdade/06.webp" alt="Planta"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/07.webp" class="glightbox"><img src="../assets/img/freeLiberdade/07.webp" alt="Área comum"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/08.webp" class="glightbox"><img src="../assets/img/freeLiberdade/08.webp" alt="Decorado"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/09.webp" class="glightbox"><img src="../assets/img/freeLiberdade/09.webp" alt="Planta"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/10.webp" class="glightbox"><img src="../assets/img/freeLiberdade/10.webp" alt="Área comum"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/11.webp" class="glightbox"><img src="../assets/img/freeLiberdade/11.webp" alt="Decorado"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/12.webp" class="glightbox"><img src="../assets/img/freeLiberdade/12.webp" alt="Planta"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/13.webp" class="glightbox"><img src="../assets/img/freeLiberdade/13.webp" alt="Área comum"></a></div>
+                            <div class="swiper-slide"><a href="../assets/img/freeLiberdade/14.webp" class="glightbox"><img src="../assets/img/freeLiberdade/14.webp" alt="Decorado"></a></div>
                         </div>
                         <!-- setas do carrosel -->
                         <div class="swiper-button-next"></div>
@@ -305,11 +310,21 @@
         </div>
     </footer>
 
+    <!-- GLightbox JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     
-    <!-- Initialize Swiper -->
+    <!-- Initialize Plugins -->
     <script>
+      // Initialize GLightbox
+      var lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+      });
+
+      // Initialize Swiper
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 10,
         navigation: {
