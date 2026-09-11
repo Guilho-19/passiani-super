@@ -362,6 +362,13 @@ h1, h2, h3, .logo {
         flex-direction: column;
         gap: 12px;
     }
+    .header .logo {
+        font-size: 1.35rem; /* Fonte um pouco menor para celular */
+        white-space: nowrap; /* Impede que Super Passiani quebre em duas linhas */
+    }
+    .header .logo img {
+        height: 28px !important; /* Ajusta a imagem da Econ proporcionalmente */
+    }
     .nav ul {
         flex-wrap: wrap;
         justify-content: center;
