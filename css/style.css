@@ -370,12 +370,14 @@ h1, h2, h3, .logo {
         height: 28px !important; /* Ajusta a imagem da Econ proporcionalmente */
     }
     .nav ul {
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Mantém todos os itens na mesma linha */
         justify-content: center;
-        gap: 15px;
+        gap: 12px; /* Reduz levemente o espaçamento para caberem todos */
+        padding: 0;
     }
     .nav a {
-        font-size: 0.85rem;
+        font-size: 0.75rem; /* Ajuste no tamanho da fonte para as 4 palavras caberem */
+        white-space: nowrap; /* Impede a quebra de texto de um único link */
     }
 
     /* Seção Início (Hero) */
