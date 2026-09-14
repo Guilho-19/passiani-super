@@ -78,7 +78,7 @@ h1, h2, h3, .logo {
 .hero {
     /* Imagem de fundo arquitetônica com um overlay escuro (azul marinho) para garantir a leitura do texto */
     background: linear-gradient(rgba(20, 33, 61, 0.7), rgba(12, 21, 36, 0.85)),
-                url('../assets/img/landingPage/foguetePassiani.webp') center center / cover no-repeat;
+                url('../assets/img/landingPage/foguetePassiani.webp') center 30% / cover no-repeat;
     padding: 160px 0; /* Aumentei um pouco o respiro para destacar mais a imagem */
     text-align: center;
 }
